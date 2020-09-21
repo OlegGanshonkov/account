@@ -108,6 +108,9 @@ App::init();
         <pre>
             <?php print_r($accounts); ?>
         </pre>
+
+        // Для оптимизации можно добавить составной ключ:
+        CREATE INDEX status_date ON account(status, date)
     </div>
 </div>
 </body>
