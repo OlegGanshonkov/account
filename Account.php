@@ -80,12 +80,11 @@ class Account
     }
 
 
-    /**
-     * @return int
-     */
-    public function getComposition(): int
+    public function __get($name)
     {
-        return $this->compositionModel->value ? (int)$this->compositionModel->value : 0;
+        if ($name === 'composition'){
+            return $this->getCompositions();
+        }
     }
 
     /**
